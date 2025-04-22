@@ -1,0 +1,33 @@
+/* styles/Footer.module.css */
+.footer {
+    width: 100%;
+    padding: 1.5rem 2rem; /* Vertical and horizontal padding */
+    margin-top: 4rem; /* Space above the footer */
+    background-color: var(--color-background-light); /* Use the slightly lighter background */
+    border-top: 1px solid var(--color-border); /* Subtle top border */
+    text-align: center;
+    font-size: 0.9rem; /* Slightly smaller text */
+    color: var(--color-text); /* Use the standard text color */
+  }
+  
+  .footer p {
+    margin-bottom: 0.5em; /* Space between paragraphs if you have multiple */
+  }
+  
+  .footer a {
+    color: var(--color-primary); /* Use the primary accent color for links */
+    font-weight: 500; /* Make links slightly bolder */
+  }
+  
+  .footer a:hover {
+
+  .footer a:hover { 
+    color: var(--color-primary-hover); /* Use hover color */
+    text-decoration: underline;
+  }
+  
+  /* Optional: Style for the "Made with" text */
+  .madeWith {
+      font-size: 0.8rem;
+      opacity: 0.8;
+  }}

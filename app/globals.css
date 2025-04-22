@@ -1,0 +1,188 @@
+
+/* globals.css */
+
+/* 1. Font Variables (Defined via next/font in layout.js) */
+:root {
+  /* Define Colors */
+  --color-background: #0f111a; /* Fallback dark background */
+  --color-background-images: url('/images/background-dep.jpg');
+  --color-background-light: #1a233f; /* Slightly lighter blue for cards/accents */
+  --color-text: #cdd6f4; /* Light grayish blue text */
+  --color-heading: #eff1f5; /* Brighter white/light grey for headings */
+  --color-primary: #89b4fa; /* Vibrant blue accent */
+  --color-primary-hover: #7aa2f7; /* Slightly darker blue for hover */
+  --color-border: #3b4261; /* Subtle border color */
+
+  /* Define Fonts */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-orbitron), var(--font-sans); /* Fallback to sans */
+}
+/* 1. Font Variables (Defined via next/font in layout.tsx) */
+:root {
+  /* Define Colors */
+  --color-background-image: url('/images/background-dep.jpg'); /* Background image path */
+  --color-background-overlay: rgba(10, 15, 31, 0.9); /* Overlay gradient base color */
+  --color-background-light: #1a233f;
+  --color-text: #cdd6f4;
+  --color-heading: #eff1f5;
+  --color-primary: #89b4fa;
+  --color-primary-hover: #7aa2f7;
+  --color-border: #3b4261;
+
+  /* Define Fonts */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-orbitron), var(--font-sans);
+}
+
+/* 2. Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px; /* Base font size */
+  line-height: 1.6; /* Improve readability */
+  color: var(--color-text);
+
+  /* Background: image + subtle gradient blend */
+  background:
+    var(--color-background-images) center/cover no-repeat fixed,
+    linear-gradient(
+      160deg,
+      var(--color-background-light) 0%,
+      #11182e 100%
+    );
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+
+  /* Smoother font rendering */
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  
+  /* ✅ Combine gradient overlay + image background */
+  background-image:
+    linear-gradient(160deg, var(--color-background-overlay), rgba(17, 24, 46, 0.9)),
+    var(--color-background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 3. Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-heading);
+  line-height: 1.2;
+  margin-bottom: 0.75em; /* Default spacing below headings */
+  letter-spacing: 0.02em; /* Slight spacing for display font */
+
+  margin-bottom: 0.75em;
+  letter-spacing: 0.02em;
+
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: 1em; /* Default spacing below paragraphs */
+  margin-bottom: 1em;
+
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* 4. Main Layout Container */
+main {
+  min-height: 100vh;
+  padding: 5rem 2rem; /* More vertical padding, reasonable horizontal */
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 5. Enhanced Scrollbar (Optional, Webkit browsers like Chrome/Edge/Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background); /* Track background */
+/* 5. Enhanced Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border); /* Thumb color */
+  border-radius: 5px;
+  border: 2px solid var(--color-background); /* Creates padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary); /* Thumb color on hover */
+}
+
+/* 6. Text Selection Highlight */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+
+  background-color: var(--color-border);
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary);
+}
+
+/* 6. Text Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-background-light);
+
+}}

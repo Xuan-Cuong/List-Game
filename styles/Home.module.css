@@ -1,0 +1,80 @@
+.container {
+    width: 100%;
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+  
+  .gameGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Spacing between cards */
+    margin-bottom: 3rem;
+  }
+  
+  /* Styles for the game display modal/iframe */
+  .gameOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Darker overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's on top */
+    padding: 20px;
+  }
+  
+  .gameContainer {
+    width: 90%;
+    height: 85%;
+    max-width: 1200px; /* Limit max iframe width */
+    background-color: #111;
+    border: 1px solid #555;
+    border-radius: 8px;
+    overflow: hidden; /* Needed for iframe */
+    display: flex; /* Use flex for iframe */
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  .gameIframe {
+    width: 100%;
+    height: 100%; /* Fill container */
+    border: none; /* Remove iframe border */
+    flex-grow: 1; /* Allow iframe to take available space */
+  }
+  
+  .closeButton {
+    position: absolute; /* Position relative to overlay */
+    top: 30px;
+    right: 30px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 1001; /* Above iframe container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s ease;
+  }
+  
+  .closeButton:hover {
+    background-color: #cc0000;
+  }
