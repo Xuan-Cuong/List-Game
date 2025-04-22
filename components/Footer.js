@@ -1,5 +1,5 @@
 // components/Footer.js
-import Link from 'next/link'; // Optional: If you add links
+// Optional: If you add links
 import styles from '@/styles/Footer.module.css'; // Adjust path if not using alias
 
 export default function Footer() {

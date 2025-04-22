@@ -1,7 +1,6 @@
 'use client'; // Needed for useState and onClick events
 
-import { useState } from 'react';
-import Head from 'next/head'; // Although metadata is preferred in layout, can use Head here if needed
+import { useState } from 'react';// Although metadata is preferred in layout, can use Head here if needed
 import GameCard from '@/components/GameCard'; // Adjust path if not using alias
 import styles from '@/styles/Home.module.css'; // Adjust path if not using alias
 
